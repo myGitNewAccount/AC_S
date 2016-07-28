@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>Controller</servlet-name>
+        <servlet-class>ua.com.iteducate.servlet.Controller</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControllerHelper</servlet-name>
+        <servlet-class>ua.com.iteducate.servlet.ControllerHelper</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Controller</servlet-name>
+        <url-pattern>/Controller</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControllerHelper</servlet-name>
+        <url-pattern>/ControllerHelper</url-pattern>
+    </servlet-mapping>
+    <resource-ref>
+        <res-ref-name>jdbc/WebMoney</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+        <res-sharing-scope>Shareable</res-sharing-scope>
+    </resource-ref>
+    	<session-config>
+		<session-timeout>10</session-timeout>
+	</session-config>
+</web-app>
